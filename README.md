@@ -1,1 +1,2 @@
 # CYImageCompressor
+可压缩图片到固定分辨率的os软件 适用于app打包时所需的icon等图标的快速生成
