@@ -150,7 +150,9 @@
     // create CIImage from bitmap
     CIImage * ciImage = [[CIImage alloc] initWithBitmapImageRep:bitmap];
     
-    CGImageRef ref = CGImageCreateWithImageInRect(ciImage.CGImage, CGRectMake(0, 0, 1024, 1024));
+    float width = CGImageGetWidth(ciImage.CGImage);
+    float height = CGImageGetHeight(ciImage.CGImage);
+    CGImageRef ref = CGImageCreateWithImageInRect(ciImage.CGImage, CGRectMake(0, 0, width, height));
     
     NSRect imageRect = NSMakeRect(0.0, 0.0, size.width, size.height);
     CGContextRef imageContext = nil;
